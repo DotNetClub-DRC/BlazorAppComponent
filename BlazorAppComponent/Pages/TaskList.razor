@@ -1,0 +1,20 @@
+﻿@page "/taskList"
+
+<h3>TaskList</h3>
+
+<EditForm Model="@newTask" OnInvalidSubmit="AddTask">
+    <InputText @bind-Value="newTask.Task" />
+    <button type="submit">Add Task</button>
+</EditForm>
+
+@code {
+
+    private List<TaskModel> tasks = new List<TaskModel>();
+    private TaskModel newTask = new TaskModel();
+
+    private void AddTask()
+    {
+
+    }
+
+}
